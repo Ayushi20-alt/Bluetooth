@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
 
         val buttonPrintimage : Button = findViewById(R.id.btnPrintimage)
         buttonPrintimage.setOnClickListener {
-            if(Printooth.hasPairedPrinter())
+            if(!Printooth.hasPairedPrinter())
             {
                 startActivityForResult(Intent(this@MainActivity,ScanningActivity::class.java), ScanningActivity.SCANNING_FOR_PRINTER)
             }
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), PrintingCallback {
 
         val buttonPrinttext : Button = findViewById(R.id.btnPrint)
         buttonPrinttext.setOnClickListener {
-            if(Printooth.hasPairedPrinter())
+            if(!Printooth.hasPairedPrinter())
             {
                 startActivityForResult(Intent(this@MainActivity,ScanningActivity::class.java), ScanningActivity.SCANNING_FOR_PRINTER)
             }
